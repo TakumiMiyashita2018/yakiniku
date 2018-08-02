@@ -1,0 +1,17 @@
+python average.py train01.jsonl normal01.jsonl average01.jsonl
+python average.py train02.jsonl normal02.jsonl average02.jsonl
+python average.py train03.jsonl normal03.jsonl average03.jsonl
+python average.py train04.jsonl normal04.jsonl average04.jsonl
+python average.py train05.jsonl normal05.jsonl average05.jsonl
+echo The processing of averaging and normalization has ended.
+python variance.py average01.jsonl normal01.jsonl variance01.jsonl
+python variance.py average02.jsonl normal02.jsonl variance02.jsonl
+python variance.py average03.jsonl normal03.jsonl variance03.jsonl
+python variance.py average04.jsonl normal04.jsonl variance04.jsonl
+python variance.py average05.jsonl normal05.jsonl variance05.jsonl
+Variance calculation is over.
+python weighting.py variance01.jsonl average01.jsonl test.jsonl
+python weighting.py variance02.jsonl average02.jsonl test.jsonl
+python weighting.py variance03.jsonl average03.jsonl test.jsonl
+python weighting.py variance04.jsonl average04.jsonl test.jsonl
+python weighting.py variance05.jsonl average05.jsonl test.jsonl
