@@ -1,1 +1,4 @@
-python weighting.py variance01.jsonl average01.jsonl test.jsonl
+python script/month.py data/train02.jsonl
+python script/month.py data/train03.jsonl
+python script/month.py data/train04.jsonl
+python script/month.py data/train05.jsonl

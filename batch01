@@ -1,1 +1,4 @@
-python variance.py average01.jsonl normal01.jsonl variance01.jsonl
+python script/average.py data/test.jsonl tmpdata/normal_test.jsonl tmpdata/average_test.jsonl
+echo The processing of averaging and normalization has ended.
+python script/variance.py tmpdata/average_test.jsonl tmpdata/normal_test.jsonl tmpdata/variance_test.jsonl
+echo Variance calculation is over.
