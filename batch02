@@ -1,4 +1,5 @@
-python script/month.py data/train02.jsonl
-python script/month.py data/train03.jsonl
-python script/month.py data/train04.jsonl
-python script/month.py data/train05.jsonl
+python script/average.py tmpdata/n_test.jsonl tmpdata/a_test.jsonl data/train01.jsonl data/train02.jsonl data/train03.jsonl data/train04.jsonl data/train05.jsonl
+echo The processing of averaging and normalization has ended.
+python script/variance.py tmpdata/a_test.jsonl tmpdata/n_test.jsonl tmpdata/v_test.jsonl
+echo Variance calculation is over.
+python script/weighting.py tmpdata/v_test.jsonl tmpdata/a_test.jsonl data/test.jsonl

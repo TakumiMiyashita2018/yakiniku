@@ -1,4 +1,1 @@
-python script/average.py data/test.jsonl tmpdata/normal_test.jsonl tmpdata/average_test.jsonl
-echo The processing of averaging and normalization has ended.
-python script/variance.py tmpdata/average_test.jsonl tmpdata/normal_test.jsonl tmpdata/variance_test.jsonl
-echo Variance calculation is over.
+python script/yakiniku.py data/train_all.jsonl data/train01.jsonl data/train02.jsonl data/train03.jsonl data/train04.jsonl data/train05.jsonl

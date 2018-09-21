@@ -1,17 +1,17 @@
-python script/average.py data/train01.jsonl data/normal01.jsonl data/average01.jsonl
-python script/average.py data/train02.jsonl data/normal02.jsonl data/average02.jsonl
-python script/average.py data/train03.jsonl data/normal03.jsonl data/average03.jsonl
-python script/average.py data/train04.jsonl data/normal04.jsonl data/average04.jsonl
-python script/average.py data/train05.jsonl data/normal05.jsonl data/average05.jsonl
+python script/average.py tmpdata/n_01.jsonl tmpdata/a_01.jsonl data/train02.jsonl data/train03/jsonl data/train04.jsonl data/train05.jsonl data/test.jsonl
+python script/average.py tmpdata/n_02.jsonl tmpdata/a_02.jsonl data/train01.jsonl data/train03/jsonl data/train04.jsonl data/train05.jsonl data/test.jsonl
+python script/average.py tmpdata/n_03.jsonl tmpdata/a_03.jsonl data/train01.jsonl data/train02.jsonl data/train04.jsonl data/train05.jsonl data/test.jsonl
+python script/average.py tmpdata/n_04.jsonl tmpdata/a_04.jsonl data/train01.jsonl data/train02.jsonl data/train03/jsonl data/train05.jsonl data/test.jsonl
+python script/average.py tmpdata/n_05.jsonl tmpdata/a_05.jsonl data/train01.jsonl data/train02.jsonl data/train03/jsonl data/train04.jsonl data/test.jsonl
 echo The processing of averaging and normalization has ended.
-python script/variance.py data/average01.jsonl data/normal01.jsonl data/variance01.jsonl
-python script/variance.py data/average02.jsonl data/normal02.jsonl data/variance02.jsonl
-python script/variance.py data/average03.jsonl data/normal03.jsonl data/variance03.jsonl
-python script/variance.py data/average04.jsonl data/normal04.jsonl data/variance04.jsonl
-python script/variance.py data/average05.jsonl data/normal05.jsonl data/variance05.jsonl
+python script/variance.py tmpdata/a_01.jsonl tmpdata/n_01.jsonl tmpdata/v_01.jsonl
+python script/variance.py tmpdata/a_02.jsonl tmpdata/n_02.jsonl tmpdata/v_02.jsonl
+python script/variance.py tmpdata/a_03.jsonl tmpdata/n_03.jsonl tmpdata/v_03.jsonl
+python script/variance.py tmpdata/a_04.jsonl tmpdata/n_04.jsonl tmpdata/v_04.jsonl
+python script/variance.py tmpdata/a_05.jsonl tmpdata/n_05.jsonl tmpdata/v_05.jsonl
 echo Variance calculation is over.
-python script/weighting.py data/variance01.jsonl data/average01.jsonl data/test.jsonl
-python script/weighting.py data/variance02.jsonl data/average02.jsonl data/test.jsonl
-python script/weighting.py data/variance03.jsonl data/average03.jsonl data/test.jsonl
-python script/weighting.py data/variance04.jsonl data/average04.jsonl data/test.jsonl
-python script/weighting.py data/variance05.jsonl data/average05.jsonl data/test.jsonl
+python script/weighting.py tmpdata/v_01.jsonl tmpdata/a_01.jsonl data/train01.jsonl
+python script/weighting.py tmpdata/v_02.jsonl tmpdata/a_02.jsonl data/train02.jsonl
+python script/weighting.py tmpdata/v_03.jsonl tmpdata/a_03.jsonl data/train03.jsonl
+python script/weighting.py tmpdata/v_04.jsonl tmpdata/a_04.jsonl data/train04.jsonl
+python script/weighting.py tmpdata/v_05.jsonl tmpdata/a_05.jsonl data/train05.jsonl
