@@ -10,8 +10,11 @@ def normalization(dict):
 
     return list
 
-def variance():
-    pass
+def sortDictValue(dict):
+    ans = []
+    for k, v in sorted(dict.items(), key = lambda x: -x[1]):
+        ans.append(str(k) + ": " + str(v))
+    return ans
 
 def compare(dict, l_test):
     s_benign = s_maricious = 0
