@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import os
-import ember
+import ember__init__
 import argparse
 
 
@@ -19,10 +19,10 @@ def main():
     y_train_path = os.path.join(args.datadir, "y_train.dat")
     if not (os.path.exists(X_train_path) and os.path.exists(y_train_path)):
         print("Creating vectorized features")
-        ember.create_vectorized_features(args.datadir)
+        ember__init__.create_vectorized_features(args.datadir)
 
     print("Training LightGBM model")
-    lgbm_model = ember.train_model(args.datadir)
+    lgbm_model = ember__init__.train_model(args.datadir)
     lgbm_model.save_model(os.path.join(args.datadir, "model.txt"))
 
 
